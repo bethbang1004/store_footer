@@ -5,20 +5,34 @@
 npm install
 ```
 
+### Use Veux  
+```
+npm install --save vuex
+```  
+
+### Use Veusax (Reference: https://lusaxweb.github.io/vuesax/development/#quick-start-cdn)      
+**Step1**  
+```
+npm install vuesax
+```   
+
+**Step2**   
+Vuesax is a Vuejs library. To use it, add the code below:   
+```
+import Vue from 'vue'
+import Vuesax from 'vuesax'
+
+import 'vuesax/dist/vuesax.css' //Vuesax styles
+Vue.use(Vuesax, {
+  // options here
+})  
+``` 
+
 ### Compiles and hot-reloads for development
 ```
 npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
+``` 
+ 
+ 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
