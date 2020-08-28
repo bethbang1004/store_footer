@@ -6,9 +6,31 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
+    path: '/home',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '',
+    name: 'TestFooter',
+    component: () => import('@/layouts/components/footer.vue'),
+    children: [{
+      path: '/',
+      name: 'test1',
+      component: () => import('@/views/test1.vue')
+    }, {
+      path: '/views/test2',
+      name: 'test2',
+      component: () => import('@/views/test2.vue')
+    }, {
+      path: '/views/test3',
+      name: 'test3',
+      component: () => import('@/views/test3.vue')
+    }, {
+      path: '/views/test4',
+      name: 'test4',
+      component: () => import('@/views/test4.vue')
+    }]
   },
   {
     path: '/about',
